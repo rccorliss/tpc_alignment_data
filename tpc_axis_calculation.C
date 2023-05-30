@@ -102,8 +102,8 @@ TVector3 tpcY0=tpcAxisInGlobal;tpcY0.SetY(0);
   */
   //report the X Euler Angles, which we can use to rebuild this:
 
-  printf("Magnet->TPC Euler angles:  XPhi=%f, xPsi=%f, XTheta=%f\n",tpcPassiveMagnet.GetXPhi(),tpcPassiveMagnet.GetXPsi(),tpcPassiveMagnet.GetXTheta());
-  printf("To generate this transformation:\n  TRotation magnetToTpc; magnetToTpc.SetXEulerAngles(%f,%f,%f)\n",tpcPassiveMagnet.GetXPhi(),tpcPassiveMagnet.GetXPsi(),tpcPassiveMagnet.GetXTheta());
+  printf("Magnet->TPC Euler angles:  XPhi=%f, xTheta=%f, XPsi=%f\n",tpcPassiveMagnet.GetXPhi(),tpcPassiveMagnet.GetXTheta(),tpcPassiveMagnet.GetXPsi());
+  printf("To generate this transformation:\n  TRotation magnetToTpc; magnetToTpc.SetXEulerAngles(%f,%f,%f)\n",tpcPassiveMagnet.GetXPhi(),tpcPassiveMagnet.GetXTheta(),tpcPassiveMagnet.GetXPsi());
 
   return;
   
