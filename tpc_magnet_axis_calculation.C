@@ -1,4 +1,4 @@
-void tpc_axis_calculation(){
+void tpc_magnet_axis_calculation(){
   //this code calculates the transformation needed to convert a magnet map measured with respect to the magnet axes into a field map with respect to the TPC coordinate system.  It hard-codes the survey measurements made of the magnet and TPC by the BNL survey group, and accounts for pitch, yaw, roll, and translation of both the TPC and the magnet with respect to the sPHENIX global coordinate system.
 
   //These values are used in the AnnularFieldSim code that calculates/simulates distortions in the TPC, and may be useful elsewhere as well.
