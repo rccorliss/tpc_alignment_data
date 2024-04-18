@@ -18,3 +18,12 @@ tpc_magnet_axis_calculation.C -- finds the orientation of the tpc wrt the magnet
 ogp_to_tree.C -- converts the edges.DAT files into .ogp_tree.root files, which contains a ntuple with petal#, stripe#, and tvectors for each stripe
 opc_to_tree.C -- functions to determine area and geometric centers.
 
+
+the imagined workflow is:
+0) extract the alignment circle positions from the survey and correlate them to the petal in question.
+-- this is done in analyze_cm_tree.C , except that this does not go to the as-installed position, but the as-measured-on-the-table position.
+1) read in the point clouds and extract the alignment circles
+2) determine the transformation from those alignment circles ot the circles in the survey
+3) apply that transformation to all points
+4) compute the centers and areas of all the enclosed shapes, in TPC coordinates
+5) label these according to Ben's naming convention
